@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Wk2 Project: Foundation 5</title>
+        <link rel="stylesheet" href="css/foundation.min.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link href='https://fonts.googleapis.com/css?family=Ultra' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <script src="js/vendor/modernizr.js"></script>
+        <script src="js/vendor/jquery.min.js"></script>
+        <script src="js/articles.js"></script>
+        <script src="js/scripts.js"></script>
+
+
+    </head>
+    <body>
+        <!-- Header Area -->
+        <header>
+            <div class="fixed">
+                <nav class="top-bar" data-topbar role="navigation">
+                    <ul class="title-area">
+                        <li class="name"><h1><a href="index.html">techly</a></h1></li>
+                        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+                    </ul>
+                    <section class="top-bar-section">
+                        <ul class="left">
+                            <li class="active"><a href="#">Main</a></li>
+                            <li><a href="#new">New</a></li>
+                            <li><a href="#signdiv">Sign Up</a></li>
+                            <li class="has-dropdown"><a href="#">Share</a>
+                                <ul class="dropdown connect">
+                                    <li><a href="#"><i class="fa fa-facebook"> Facebook</i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"> Twitter</i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"> Google+</i></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="right">
+                            <li class="has-form">
+                                <a href="#" class="button" data-reveal-id="loginModal">Login</a>
+                            </li>
+                        </ul>
+                    </section>
+                </nav>
+            </div><!-- Close .fixed div for nav -->
+        </header>
+        <!-- End Header -->
+
+        <!-- Start Landing Area -->
+        <div id="landing">
+            <div class="row full-width">
+                <div class="small-12 medium-8 columns">
+                    <ul data-orbit>
+                        <li><img src="images/apple.jpg" alt="slide 1" />
+                            <div class="orbit-caption">
+                                The New Apple Line Up.
+                            </div>
+                        </li>
+                        <li><img src="images/iphone.jpg" alt="slide 2" />
+                            <div class="orbit-caption">
+                                Is It Worth Upgrading?
+                            </div>
+                        </li>
+                        <li><img src="images/main.jpg" alt="slide 3" />
+                            <div class="orbit-caption">
+                                Top Tools For Mac Users.
+                            </div>
+                        </li>
+                        <li><img src="images/watch.jpg" alt="slide 4" />
+                            <div class="orbit-caption">
+                                Wearables: The Good, The Bad, The Ugly.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--End left 8 columns -->
+                <div class="small-12 medium-3 columns">
+
+                    <div class="row" id="feature">
+                        <script>getFeature();</script> <!-- Gets content for featured articles from articles.js -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Landing Area -->
+
+        <!-- Start Main Content Area -->
+        <!-- Articles -->
+        <div class="row full-width">
+            <div class="small-12 medium-8 columns left">
+                <div class="article-wrap" id="new">
+                    <h3>Newest articles</h3>
+                    <div id="recent">
+                        <script> getArt();</script> <!-- Gets content from articles.js -->
+                    </div>
+                </div>
+            </div>
+        <!-- Start Side Bar -->
+            <aside>
+                <div class="small-12 medium-3 small-centered columns right">
+                    <!-- Image Gallery -->
+                    <h3>Newest Photos</h3>
+                    <ul class="small-block-grid-2 medium-block-grid-1 clearing-thumbs" data-clearing>
+                        <li><a href="images/apple.jpg"><img src="images/apple.jpg" class="th" alt="Apple products"></a></li>
+                        <li><a href="images/watch.jpg"><img src="images/watch.jpg" class="th" alt="Smart Watch"></a></li>
+                        <li><a href="images/iphone.jpg"><img src="images/iphone.jpg" class="th" alt="Iphone"></a></li>
+                        <li><a href="images/main.jpg"><img src="images/main.jpg" class="th" alt="Macbook"></a></li>
+                    </ul>
+                </div>
+                <div class="medium-3 small-12 small-centered right columns" id="signdiv">
+                    <!-- Sign Up Form -->
+                    <form class="panel" id="signup" method="post" action="example.com">
+                        <h5>Sign Up</h5>
+                        <div class="row">
+                            <div class="small-12 columns">
+                                <input type="text" placeholder="First Name">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-12 columns">
+                                <input type="text" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-12 columns">
+                                <input type="email" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-12 columns">
+                                <input type="text" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-12 columns">
+                                <label>Should we send email updates?</label>
+                                <input id="checkbox1" type="checkbox" checked><label for="checkbox1">Go ahead</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-12 columns">
+                                <input type="submit" value="Sign Me Up" class="button radius"/>
+                            </div>
+                        </div>
+                    </form>
+                    <a href="#" id="signupModalBtn" class="button radius" data-reveal-id="signupModal">Sign Up</a>
+                </div>
+                <div class="small-12 medium-3 columns">
+                    <!-- Sections Table -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Section</th>
+                                <th>Posts</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>iOS</td>
+                                <td>1,234</td>
+                            </tr>
+                            <tr>
+                                <td>Windows</td>
+                                <td>1,234</td>
+                            </tr>
+                            <tr>
+                                <td>Android</td>
+                                <td>1,234</td>
+                            </tr>
+                            <tr>
+                                <td>Wearable</td>
+                                <td>1,234</td>
+                            </tr>
+                            <tr>
+                                <td>Code</td>
+                                <td>1,234</td>
+                            </tr>
+                            <tr>
+                                <td>Smart Tech</td>
+                                <td>1,234</td>
+                            </tr>
+                            <tr>
+                                <td>Linux</td>
+                                <td>1,234</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </aside>
+        </div>
+
+        <!-- End Main Content Area -->
+
+        <!-- Modal Window for Login -->
+        <div id="loginModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+            <h2 id="modalTitle">Login, your tech updates await.</h2>
+            <p class="lead"><a href="#signup">No account? Create one here.</a></p>
+            <form id="login" method="post" action="example.com">
+                <div class="row">
+                    <div class="small-12 medium-6 medium-centered columns">
+                        <input type="email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 medium-6 medium-centered columns">
+                        <input type="text" placeholder="Password">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 medium-6 medium-centered columns">
+                        <input type="submit" value="Login" class="button radius"/>
+                    </div>
+                </div>
+            </form>
+
+
+            <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+        </div>
+
+        <!-- Sign Up Modal -->
+        <div id="signupModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+            <h2 id="mTitle">Create your account here.</h2>
+            <p class="lead"><a href="#loginModal">Already have an account? Login here.</a></p>
+            <form id="signupformModal" method="post" action="example.com">
+                <h5>Sign Up</h5>
+                <div class="row">
+                    <div class="small-12 columns">
+                        <input type="text" placeholder="First Name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 columns">
+                        <input type="text" placeholder="Last Name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 columns">
+                        <input type="email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 columns">
+                        <input type="text" placeholder="Password">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 columns">
+                        <label>Should we send email updates?</label>
+                        <input id="checkbox" type="checkbox" checked><label for="checkbox1">Go ahead</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 columns">
+                        <input type="submit" value="Sign Me Up" class="button radius"/>
+                    </div>
+                </div>
+            </form>
+
+
+            <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            Daniel Cobb | Wk2 Project: Foundation 5
+        </footer>
+
+        <script src="js/vendor/fastclick.js"></script>
+        <script src="js/foundation.min.js"></script>
+        <script type="text/javascript">
+        $(document).foundation({
+            orbit:{
+                animation: 'fade',
+                timer_speed: '2000',
+                slide_number: false,
+                bullets: false
+            }
+        });
+        </script>
+
+    </body>
+</html>

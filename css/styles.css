@@ -1,0 +1,227 @@
+/*------ General Body Styles ------*/
+body{
+    max-width:1680px;
+    font-size:100%;
+    color:#2C3E50;
+    background:#DADFE1;
+}
+.full-width{
+    max-width:95% !important;
+    margin:0 auto;
+}
+
+/*----- Foundation Style Edits -----*/
+
+.top-bar, .top-bar-section ul li a, .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section .has-form,.top-bar-section .dropdown li:not(.has-form):not(.active)>a:not(.button){
+    background:#0A3A83;
+    font-family: 'Abel', sans-serif;
+}
+
+.top-bar .name h1 a{
+    color:#1BBC9B;
+}
+
+button, .button, .top-bar-section .has-form .button{
+    background: linear-gradient(to bottom, #1BBC9B 0%,#0F7560 100%);
+    color:#2C3E50;
+    font-family: 'Abel', sans-serif;
+    box-shadow: none;
+}
+
+.top-bar-section .has-dropdown>a:after{
+    border-color: #1BBC9B transparent transparent transparent;
+}
+
+.top-bar-section li.active:not(.has-form) a:not(.button){
+    background:#1BBC9B;
+}
+
+.top-bar-section ul li a:not(.button):hover, .top-bar-section li:not(.has-form) a:not(.button):hover, .top-bar-section li:not(.has-form) a:not(.button):hover, .top-bar-section .dropdown li:not(.has-form):not(.active)>a:not(.button):hover{
+    background:#008CBA;
+    cursor:pointer;
+}
+.button{
+    box-shadow: 2px 3px 10px 0 #9BA5B0;
+}
+
+/*----- Nav -----*/
+nav h1 a{
+    font-family: 'Ultra', serif;
+    font-size: 1.5em;
+}
+
+/*----- Main Content -----*/
+
+/* Main Content Article Styles */
+
+.article{
+    width:100%;
+    margin:2% auto;
+    background:#ECECEC;
+    box-shadow: 5px 7px 20px 0 #9BA5B0;
+
+}
+
+.article h4{
+    font-size: 1.5em;
+    box-shadow: inset 0px -3px 0 0 #0F7560;
+}
+.article h5{
+    color:#2C3E50;
+}
+
+/* Landing styles: Image slider and featured articles */
+#landing{
+    margin-top:2%;
+}
+#landing div h3, .article-wrap > h3:first-of-type, aside h3{
+    margin-top:2%;
+    font-family: 'Ultra', serif;
+    font-size: 1.5em;
+    width:100%;
+}
+
+.feature a, .article h4, form > h5{
+    color:inherit;
+    font-size:1.2em;
+    font-family: 'Abel', sans-serif;
+}
+.feature a{
+    font-weight:bolder;
+}
+.feature:nth-child(odd){
+    margin:5% 0;
+    transform:rotate(15deg);
+}
+.feature:nth-child(even){
+    transform:rotate(5deg);
+}
+.feature{
+    background: #FFFFA5;
+    padding:5%;
+}
+
+/* Table Styles */
+
+table{
+    width:100%;
+    border-collapse: collapse;
+}
+
+table thead tr th{
+    font-family: 'Abel', sans-serif;
+    font-size: 1.2em;
+    background:#0A3A83;
+    color:#1BBC9B;
+}
+
+table tbody tr:nth-child(odd){
+    background:#1BBC9B;
+}
+
+table tbody tr:nth-child(even){
+    background:#DADFE1;
+}
+
+/* Form and Modal Styles */
+
+form{
+    text-align: center;
+}
+input{
+    margin:0 auto;
+}
+
+#loginModal #modalTitle, #signupModal #mTitle{
+    font-family: 'Ultra', serif;
+    font-size: 1.5em;
+    box-shadow: inset 0px -5px 0 0 #0F7560;
+}
+
+#loginModal p > a, #signupModal p > a{
+    font-family: 'Abel', sans-serif;
+    color:inherit;
+}
+
+#loginModal, #signupModal{
+    background:#DADFE1;
+}
+
+input[type="text"], input[type="email"]{
+    border-radius:5px;
+    border: 1px solid #1BBC9B;
+    box-shadow: 2px 3px 10px 0 #9BA5B0;
+
+}
+#signupModalBtn{
+    display:none;
+}
+
+/*----- Footer -----*/
+footer{
+    margin-top:5%;
+    padding:2%;
+    font-size:.75em;
+    text-align: center;
+}
+
+
+/*----- Media Queries -----*/
+/* Tablet Portrait size to 1080px*/
+@media screen and (max-width:1080px){
+    .feature a{
+        font-size: 1em;
+    }
+}
+
+/* Sign up Button Fix, Feature Section edits */
+@media screen and (max-width:780px){
+    #signup input[type="submit"]{
+        width:100%;
+        padding:10%;
+    }
+    .feature:nth-child(3), .feature:nth-child(4){
+        display:none;
+    }
+}
+
+
+/* Mobile Landscape to Tablet Portrait */
+@media screen and (max-width:767px){
+    #signup {
+        display:none;
+    }
+    #signupModalBtn{
+        display:block;
+        margin: 10% auto;
+    }
+}
+
+/* Mobile Portrait and below */
+@media screen and (max-width:480px){
+    #recent .article{
+        display:none;
+    }
+    .feature:nth-child(3), .feature:nth-child(4){
+        display:block;
+    }
+    #new > h3{
+        display:none;
+    }
+    .feature:nth-child(odd){
+        margin:5% 0;
+        transform:rotate(0deg);
+    }
+    .feature:nth-child(even){
+        transform:rotate(0deg);
+    }
+
+}
+
+/* Small devices */
+@media screen and (max-width:320px){
+    table, .orbit-container{
+        display:none;
+    }
+
+}
